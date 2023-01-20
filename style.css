@@ -1,0 +1,135 @@
+:root{
+    --bgBlack: #060606;
+    --txtGray: #BFBFBF;
+}
+
+/*Reset*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*TopBar*/
+#navbar{
+    width: 100%;
+    height: 3rem;
+    background-color: var(--bgBlack);
+    color: var(--txtGray);
+}
+#navbar__menu{
+    display: inline;
+}
+
+.navbar__menuItem{
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+}
+/*Content*/
+main{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 0.5rem;
+}
+.title{
+    font-weight: bold;
+    /*Trocar Fonte*/
+}
+h1{
+    text-align: center;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.3rem;
+}
+
+p{
+    text-indent: 1rem;
+    font-size: 1.1rem;
+    font-weight: 540;
+}
+
+li{
+    font-size: 1.1rem;
+    font-weight: 540;
+}
+
+/*Banner*/
+.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+}
+
+.banner__img{
+    padding: 1rem;
+}
+
+.banner__img img{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.banner__title{
+    padding: 0.5rem;
+    text-align: center;
+}
+.banner__text{
+    padding: 0.5rem 1.5rem;
+}
+
+.banner__text__description ul li{
+    padding-bottom: 0.5rem;
+}
+
+hr{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #BFBFBF;
+}
+
+#disclaimer{
+    margin-top: 1rem;
+    padding: 1rem;
+    color: gray;
+    font-size: small;
+}
+
+@media (min-width: 600px)
+{
+    .banner{
+        display: grid;
+        grid-template-areas:
+                "pic title"
+                "pic text";
+
+        align-items: flex-start;
+    }
+
+    .banner-odd{
+        display: grid;
+        grid-template-areas:
+                "title pic"
+                "text  pic";
+    }
+
+    .banner__img{
+        grid-area: pic;
+    }
+    .banner__title{
+        grid-area: title;
+        align-self: flex-end;
+    }
+    .banner__text{
+        grid-area: text;
+    }
+
+
+
+
+}
