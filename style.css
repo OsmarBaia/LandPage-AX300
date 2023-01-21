@@ -1,59 +1,18 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+/* Variables */
 :root{
-    --bgBlue: #001122;
-    --txtGray: #BFBFBF;
+    --bgDark:   #001122;
+    --bgLight:  #FBFAF9;
+    --txtGray:  #BFBFBF;
 }
 
 /*Reset*/
 *{
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-/*TopBar*/
-#navbar{
-    width: 100%;
-    height: 3.5rem;
-    background-color: var(--bgBlue);
-    color: var(--txtGray);
-}
-#navbar__menu{
-    display: inline;
-}
-
-.navbar__menuItem{
-    display: inline-block;
-    margin: 1rem;
-    text-decoration: none;
-}
-/*Content*/
-main{
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-}
-.title{
-    font-weight: bold;
-    /*Trocar Fonte*/
-}
-h1{
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 1.8rem;
-    margin-top: -5rem;
-    margin-bottom: 2rem;
-}
-h2{
-    font-size: 1.3rem;
-}
-
-p{
-    text-indent: 1rem;
-    font-size: 1.1rem;
-    font-weight: 540;
-}
-
-li{
-    font-size: 1.1rem;
-    font-weight: 540;
+    padding:    0;
+    margin:     0;
+    border:     0;
 }
 
 /* Utils */
@@ -69,7 +28,7 @@ li{
 }
 
 .bg-solid-darkBlue{
-    background-color: var(--bgBlue);
+    background-color: var(--bgDark);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -90,7 +49,110 @@ li{
     padding-top: 10rem;
 }
 
-/*Banner*/
+/*Texts*/
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    /*Trocar Fonte*/
+}
+h1{
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: -8rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    text-indent: 1rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*TopBar*/
+#navbar{
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--bgDark);
+    color: var(--txtGray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+#navbar.div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar__logo{
+   padding: 0 1rem 0 5rem;
+}
+
+#navbar__productName{
+    border-left: 0.1rem solid var(--txtGray);
+}
+
+#navbar__menu{
+
+}
+
+.navbar__menuItem{
+    display: inline-block;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:not( :hover) .dropdown-content {
+    display: none;
+}
+
+/*Content*/
+main{
+    background-color: var(--bgLight);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+}
+
+/*Banners*/
 .banner {
     display: flex;
     flex-direction: row;
@@ -109,6 +171,12 @@ li{
     max-width: 600px;
 }
 
+video{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
 .banner__title{
     padding: 0.5rem;
     text-align: center;
@@ -122,20 +190,30 @@ li{
 }
 
 hr{
-    width: 100%;
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+    width: auto;
     height: 0.1rem;
     background-color: #BFBFBF;
 }
 
 #disclaimer{
-    margin-top: 1rem;
-    padding: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+#disclaimer ul li{
+    padding: 0.25rem 0;
     color: gray;
     font-size: small;
+    font-weight: 100;
 }
 
 @media (min-width: 600px)
 {
+    section{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .banner{
         display: grid;
         grid-template-areas:
@@ -162,8 +240,4 @@ hr{
     .banner__text{
         grid-area: text;
     }
-
-
-
-
 }

@@ -13,10 +13,29 @@
 <header>
 <!--    NavBar  -->
     <div id="navbar">
-        <ul id="navbar__menu">
-            <li class="navbar__menuItem">Home</li>
-            <li class="navbar__menuItem">Specifications</li>
-        </ul>
+        <div>
+            <div id="navbar__logo">
+                <img src="/img/logo.png" alt="Fenvi Logo">
+            </div>
+            <div id="navbar__productName">
+                <p>FV-AX300</p>
+            </div>
+        </div>
+        <div>
+            <ul id="navbar__menu">
+                <li class="navbar__menuItem">Home</li>
+                <li class="navbar__menuItem">
+                </li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <p>Specifications</p>
+            <div class="dropdown-content">
+                <p>Hello World!</p>
+            </div>
+        </div>
+
     </div>
 </header>
 <main>
@@ -30,9 +49,10 @@
             </h2>
         </div>
         <div class="banner__img">
-            <figure>
-                <img src="/img/1.jpg" alt="">
-            </figure>
+            <video controls poster="/img/1.jpg">
+                <source src="/vid/promo_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="banner__text">
             <ul>
@@ -234,9 +254,10 @@
             </h2>
         </div>
         <div class="banner__img">
-            <figure>
-                <img src="/img/12.jpg" alt="">
-            </figure>
+            <video controls poster="/img/12.jpg">
+                <source src="/vid/tutorial_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="banner__text">
             <p>
@@ -244,27 +265,30 @@
             </p>
         </div>
     </section>
-    <hr>
-    <!-- Inserir Video Tutorial-->
-    <hr>
-    <section id="disclaimer">
-        <ul>
-            <li>As taxas máximas de sinal sem fio são as taxas físicas derivadas das especificações do padrão IEEE 802.11. A taxa de transferência de dados sem fio real, a cobertura sem fio e o número de dispositivos conectados não são garantidos e variam como resultado das condições da rede, limitações do AP e fatores ambientais, incluindo materiais de construção, obstáculos, volume e densidade de tráfego e localização do AP.
-            </li>
-            <li>O uso de Wi-Fi 6 (802.11ax) e recursos incluindo OFDMA, MU-MIMO, HE160 e 1024-QAM exigem APs para também oferecer suporte aos recursos correspondentes.
-            </li>
-            <li>§802.11ax 2x2 160 MHz permite taxas de dados teóricas máximas de 2402 Mbps, 3 × mais rápido do que o padrão 802.11ac 2x2 80 MHz (867 Mbps) e quase 6x mais rápido do que o Wi-Fi 1x1ac (433 Mbps) de referência, conforme documentado nas especificações do padrão sem fio IEEE 802.11 e exigem o uso de roteadores de rede sem fio 802.11ax configurados de forma semelhante.
-            </li>
-            <li> * “Latência até 75% menor” é baseado em dados de simulação da Intel de 802.11ax com e sem OFDMA usando 9 clientes. A latência média sem OFDM é de 36 ms, com a latência média OFDMA reduzida para 7,6 ms. A melhoria da latência requer que o AP e todos os clientes suportem OFDMA.
-            </li>
-            <li>** O uso de WPA3TM exige que os APs também suportem o recurso correspondente.
-            </li>
-            <li>
-                *** Vários novos recursos são introduzidos na versão 5.0 do Bluetooth Core Specification, incluindo velocidade 2× mais rápida e cobertura 4× mais ampla em comparação com o Bluetooth 4.2.
-            </li>
-        </ul>
+
+    <section>
+        <hr>
+        <div id="disclaimer">
+            <ul>
+                <li>As taxas máximas de sinal sem fio são as taxas físicas derivadas das especificações do padrão IEEE 802.11. A taxa de transferência de dados sem fio real, a cobertura sem fio e o número de dispositivos conectados não são garantidos e variam como resultado das condições da rede, limitações do AP e fatores ambientais, incluindo materiais de construção, obstáculos, volume e densidade de tráfego e localização do AP.
+                </li>
+                <li>O uso de Wi-Fi 6 (802.11ax) e recursos incluindo OFDMA, MU-MIMO, HE160 e 1024-QAM exigem APs para também oferecer suporte aos recursos correspondentes.
+                </li>
+                <li>§802.11ax 2x2 160 MHz permite taxas de dados teóricas máximas de 2402 Mbps, 3 × mais rápido do que o padrão 802.11ac 2x2 80 MHz (867 Mbps) e quase 6x mais rápido do que o Wi-Fi 1x1ac (433 Mbps) de referência, conforme documentado nas especificações do padrão sem fio IEEE 802.11 e exigem o uso de roteadores de rede sem fio 802.11ax configurados de forma semelhante.
+                </li>
+                <li> * “Latência até 75% menor” é baseado em dados de simulação da Intel de 802.11ax com e sem OFDMA usando 9 clientes. A latência média sem OFDM é de 36 ms, com a latência média OFDMA reduzida para 7,6 ms. A melhoria da latência requer que o AP e todos os clientes suportem OFDMA.
+                </li>
+                <li>** O uso de WPA3TM exige que os APs também suportem o recurso correspondente.
+                </li>
+                <li>
+                    *** Vários novos recursos são introduzidos na versão 5.0 do Bluetooth Core Specification, incluindo velocidade 2× mais rápida e cobertura 4× mais ampla em comparação com o Bluetooth 4.2.
+                </li>
+            </ul>
+        </div>
     </section>
-  </main>
+
+</main>
+
 <footer>
     <section id="contact">
         <div id="contact__newLetter"></div>
