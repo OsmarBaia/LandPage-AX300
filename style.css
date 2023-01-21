@@ -1,5 +1,5 @@
 :root{
-    --bgBlack: #060606;
+    --bgBlue: #001122;
     --txtGray: #BFBFBF;
 }
 
@@ -13,8 +13,8 @@
 /*TopBar*/
 #navbar{
     width: 100%;
-    height: 3rem;
-    background-color: var(--bgBlack);
+    height: 3.5rem;
+    background-color: var(--bgBlue);
     color: var(--txtGray);
 }
 #navbar__menu{
@@ -29,15 +29,17 @@
 /*Content*/
 main{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    padding: 0.5rem;
 }
 .title{
     font-weight: bold;
     /*Trocar Fonte*/
 }
 h1{
+    padding: 1.5rem 0;
     text-align: center;
     font-size: 1.8rem;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
 }
 h2{
     font-size: 1.3rem;
@@ -54,6 +56,40 @@ li{
     font-weight: 540;
 }
 
+/* Utils */
+.bg-wave-bot{
+    background: url(/img/bg_wave_bot.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    padding-bottom: 10rem;
+    margin-bottom: -0.5rem;
+}
+
+.bg-solid-darkBlue{
+    background-color: var(--bgBlue);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    color: var(--txtGray);
+    margin-bottom: -0.5rem;
+}
+
+.bg-wave-top{
+    background: url(/img/bg_wave_top.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    margin-top: -0.5rem;
+    padding-top: 10rem;
+}
+
 /*Banner*/
 .banner {
     display: flex;
@@ -61,8 +97,6 @@ li{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-    margin-top: 1rem;
 }
 
 .banner__img{
