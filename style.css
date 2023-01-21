@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 
 /* Variables */
-:root{
-    --bgDark:   #001122;
-    --bgLight:  #FBFAF9;
-    --txtGray:  #BFBFBF;
+:root {
+    --bgDark: #001122;
+    --bgLight: #FBFAF9;
+    --txtGray: #BFBFBF;
 }
 
 /*Reset*/
-*{
-    padding:    0;
-    margin:     0;
-    border:     0;
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 /* Utils */
-.bg-wave-bot{
+.bg-wave-bot {
     background: url(/img/bg_wave_bot.svg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -27,7 +27,7 @@
     margin-bottom: -0.5rem;
 }
 
-.bg-solid-darkBlue{
+.bg-solid-darkBlue {
     background-color: var(--bgDark);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -38,7 +38,7 @@
     margin-bottom: -0.5rem;
 }
 
-.bg-wave-top{
+.bg-wave-top {
     background: url(/img/bg_wave_top.svg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -46,36 +46,38 @@
     background-size: cover;
 
     margin-top: -0.5rem;
-    padding-top: 10rem;
+    padding-top: 7rem;
 }
 
 /*Texts*/
-.title{
+.title {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     /*Trocar Fonte*/
 }
-h1{
+
+h1 {
     padding: 1.5rem 0;
     text-align: center;
     font-size: 1.8rem;
-    margin-top: -8rem;
-    margin-bottom: 2rem;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: -3rem;
 }
-h2{
+
+h2 {
     font-size: 1.3rem;
     font-family: 'Montserrat', sans-serif;
 }
 
-p{
+p {
     text-indent: 1rem;
     font-size: 1.1rem;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
 }
 
-li{
+li {
     font-size: 1.1rem;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
@@ -83,40 +85,50 @@ li{
 
 
 /*TopBar*/
-#navbar{
+#navbar {
     width: 100%;
-    height: 3.5rem;
+    height: 7rem;
     background-color: var(--bgDark);
     color: var(--txtGray);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 49%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: fixed;
 }
 
-#navbar.div{
+#navbar__logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0.5rem 1.3rem;
+
 }
 
-#navbar__logo{
-   padding: 0 1rem 0 5rem;
-}
-
-#navbar__productName{
+#navbar__logo__productName {
+    margin-left: 1rem;
     border-left: 0.1rem solid var(--txtGray);
 }
 
-#navbar__menu{
-
+#navbar__menu {
+    margin: -2rem 0.5rem 0 0.5rem;
 }
 
-.navbar__menuItem{
+.navbar__menuItem {
     display: inline-block;
-    margin: 1rem;
+    margin: 0.5rem;
     text-decoration: none;
+}
+
+.navbar__menuItem a {
+    color: var(--txtGray);
+    text-decoration: none;
+}
+
+.navbar__menuItem a:hover {
+    color: blue;
 }
 
 .dropdown {
@@ -124,12 +136,17 @@ li{
     display: inline-block;
 }
 
+.dropdown:hover {
+    color: blue;
+    cursor: pointer;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: var(--bgLight);
+    min-width: 5rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
 }
@@ -143,7 +160,7 @@ li{
 }
 
 /*Content*/
-main{
+main {
     background-color: var(--bgLight);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -159,62 +176,114 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    padding-top: 3rem;
 }
 
-.banner__img{
+.banner__img {
     padding: 1rem;
 }
 
-.banner__img img{
+.banner__img img {
     width: 100%;
     height: auto;
     max-width: 600px;
 }
 
-video{
+video {
     width: 100%;
     height: auto;
     max-width: 600px;
 }
 
-.banner__title{
+.banner__title {
     padding: 0.5rem;
     text-align: center;
 }
-.banner__text{
+
+.banner__text {
     padding: 0.5rem 1.5rem;
 }
 
-.banner__text__description ul li{
+.banner__text__description ul li {
     padding-bottom: 0.5rem;
 }
 
-hr{
+hr {
     margin: 2rem 0.5rem 0.5rem 0.5rem;
     width: auto;
     height: 0.1rem;
     background-color: #BFBFBF;
 }
 
-#disclaimer{
-    padding: 0.5rem 2rem;
+#disclaimer {
+    padding: 0.5rem 2rem 2rem;
 }
 
-#disclaimer ul li{
+#disclaimer ul li {
     padding: 0.25rem 0;
     color: gray;
     font-size: small;
     font-weight: 100;
 }
 
-@media (min-width: 600px)
-{
-    section{
+/*Footer*/
+footer{
+    padding: 1rem;
+}
+
+#other-links{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#other-links div{
+    max-width: 30%;
+}
+
+#other-links ul:first-child{
+    margin-bottom: 1rem;
+}
+
+#other-links li{
+    list-style: none;
+    font-size: small;
+    font-weight: 200;
+}
+
+#other-links a{
+    text-decoration: none;
+    color: var(--txtGray);
+}
+
+#contact{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (min-width: 600px) {
+    #navbar {
+        justify-content: space-between;
+    }
+
+    #navbar__menu {
+        margin: 0 0.5rem;
+    }
+
+    section {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
-    .banner{
+
+    .banner {
         display: grid;
         grid-template-areas:
                 "pic title"
@@ -223,21 +292,23 @@ hr{
         align-items: flex-start;
     }
 
-    .banner-odd{
+    .banner-odd {
         display: grid;
         grid-template-areas:
                 "title pic"
                 "text  pic";
     }
 
-    .banner__img{
+    .banner__img {
         grid-area: pic;
     }
-    .banner__title{
+
+    .banner__title {
         grid-area: title;
         align-self: flex-end;
     }
-    .banner__text{
+
+    .banner__text {
         grid-area: text;
     }
 }
