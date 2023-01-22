@@ -3,9 +3,9 @@
 
 /* Variables */
 :root {
-    --bgDark: #001122;
-    --bgLight: #FBFAF9;
-    --txtGray: #BFBFBF;
+    --dark: #001122;
+    --light: #FBFAF9;
+    --gray: #BFBFBF;
 }
 
 /*Reset*/
@@ -16,44 +16,36 @@
 }
 
 /* Utils */
-.bg-wave-bot {
-    background: url(/img/bg_wave_bot.svg) no-repeat center center;
+.bg-cover {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+}
 
-    padding-bottom: 10rem;
-    margin-bottom: -0.5rem;
+.bg-wave-bot {
+    background: url(/img/bg_wave_bot.svg) no-repeat center center;
+    padding-bottom: 12rem;
+    margin-bottom: -3.5rem;
+    background-size: cover;
 }
 
 .bg-solid-darkBlue {
-    background-color: var(--bgDark);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    color: var(--txtGray);
+    background-color: var(--dark);
+    color: var(--gray);
     margin-bottom: -0.5rem;
 }
 
 .bg-wave-top {
     background: url(/img/bg_wave_top.svg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
     margin-top: -0.5rem;
-    padding-top: 7rem;
+    padding-top: 10rem;
+    background-size: cover;
 }
 
 /*Texts*/
 .title {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    /*Trocar Fonte*/
 }
 
 h1 {
@@ -70,9 +62,14 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
+h3 {
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
 p {
     text-indent: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
 }
@@ -88,8 +85,8 @@ li {
 #navbar {
     width: 100%;
     height: 7rem;
-    background-color: var(--bgDark);
-    color: var(--txtGray);
+    background-color: var(--dark);
+    color: var(--gray);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -104,12 +101,11 @@ li {
     flex-direction: row;
     align-items: center;
     padding: 0.5rem 1.3rem;
-
 }
 
-#navbar__logo__productName {
+#navbar__logo p {
     margin-left: 1rem;
-    border-left: 0.1rem solid var(--txtGray);
+    border-left: 0.1rem solid var(--gray);
 }
 
 #navbar__menu {
@@ -123,7 +119,7 @@ li {
 }
 
 .navbar__menuItem a {
-    color: var(--txtGray);
+    color: var(--gray);
     text-decoration: none;
 }
 
@@ -144,7 +140,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--bgLight);
+    background-color: var(--light);
     min-width: 5rem;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
@@ -159,30 +155,25 @@ li {
     display: none;
 }
 
-.dropdown-content li{
+.dropdown-content li {
     padding: 0.5rem 1rem;
- list-style: none;
+    list-style: none;
 }
 
-.dropdown-content a{
-    color: var(--txtGray);
+.dropdown-content a {
     text-decoration: none;
+    color: var(--dark);
+
 }
 
-.dropdown-content a:hover{
-    color: var(--bgDark);
-    background-color: var(--bgLight);
+.dropdown-content a:hover {
+    color: var(--gray);
 }
-
 
 /*Content*/
 main {
-    background-color: var(--bgLight);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-color: var(--light);
     background-size: cover;
-    /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
 }
 
 /*Banners*/
@@ -192,7 +183,6 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
     padding-top: 3rem;
 }
 
@@ -203,13 +193,13 @@ main {
 .banner__img img {
     width: 100%;
     height: auto;
-    max-width: 600px;
+    /*max-width: 600px;*/
 }
 
 video {
     width: 100%;
     height: auto;
-    max-width: 600px;
+    /*max-width: 600px;*/
 }
 
 .banner__title {
@@ -219,10 +209,12 @@ video {
 
 .banner__text {
     padding: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.banner__text__description ul li {
-    padding-bottom: 0.5rem;
+.banner__text ul li {
+    list-style: none;
+    padding: 0 0.5rem 0.5rem;
 }
 
 hr {
@@ -244,11 +236,11 @@ hr {
 }
 
 /*Footer*/
-footer{
+footer {
     padding: 1rem;
 }
 
-#other-links{
+#other-links {
     padding: 0 1rem;
     display: flex;
     flex-direction: row;
@@ -256,30 +248,31 @@ footer{
     align-items: flex-start;
 }
 
-#other-links div{
+#other-links div {
     max-width: 30%;
 }
 
-#other-links li{
+#other-links li {
     list-style: none;
 }
 
-#other-links a{
+#other-links a {
     text-decoration: none;
-    font-size: small;
-    font-weight: 200;
-    color: var(--txtGray);
+    font-size: x-small;
+    font-weight: normal;
+    color: var(--gray);
 }
 
-#other-links ul:first-child li{
+#other-links ul:first-child li {
     padding-bottom: 0.5rem;
 }
 
-#other-links li:first-child a{
+#other-links li:first-child a {
+    font-size: small;
     font-weight: bold;
 }
 
-#contact{
+#contact {
     padding: 0 1rem;
     display: flex;
     flex-direction: row;
@@ -288,15 +281,15 @@ footer{
     align-items: flex-start;
 }
 
-#contact div{
+#contact div {
     margin: 1rem 0;
 }
 
-#contact p{
+#contact p {
     font-size: small;
 }
 
-#contact h3{
+#contact h3 {
     margin-bottom: 0.5rem;
 }
 
@@ -309,17 +302,34 @@ footer{
         margin: 0 0.5rem;
     }
 
+    h1{
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     section {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
 
+
     .banner {
         display: grid;
         grid-template-areas:
-                "pic title"
-                "pic text";
+                 "title title"
+                    "pic text";
+
+        align-items: center;
+    }
+
+    #summary {
+        display: grid;
+        grid-template-areas:
+                "title"
+                "pic"
+                "text";
 
         align-items: flex-start;
     }
@@ -327,8 +337,24 @@ footer{
     .banner-odd {
         display: grid;
         grid-template-areas:
-                "title pic"
-                "text  pic";
+                "title title"
+                "text pic";
+
+        align-items: center;
+    }
+
+    #physical{
+        padding-top: 15rem;
+    }
+
+    #mounting {
+        display: grid;
+        grid-template-areas:
+                "title"
+                "text"
+                "pic";
+
+        align-items: center;
     }
 
     .banner__img {
@@ -344,7 +370,7 @@ footer{
         grid-area: text;
     }
 
-    #contact{
+    #contact {
         justify-content: space-evenly;
     }
 }
