@@ -12,3 +12,7 @@
  - 1 Day: Concept, Resources gathering. [OK]
  - 2 Day: Initial layout and responsiveness. [OK]
  - 3 Day: Styles and Tests. [OK]
+
+# Design
+
+![image](https://github.com/OsmarBaia/LandingPage-AX300/assets/88497805/a51cc9fd-1a09-4f6a-ad35-7a8f203a0fd0)
